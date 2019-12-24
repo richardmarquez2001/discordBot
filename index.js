@@ -15,8 +15,6 @@ const port = process.env.PORT || 3000;
 //Simple server
 http.createServer().listen(port);
 
-
-
 bot.on('ready', () => {
   console.log('this bot is online');
 });
@@ -107,4 +105,5 @@ function getPhrases(name){
 bot.on('error', err =>{
   console.log(err);
 });
-bot.login(process.env.TOKEN);
+
+bot.login(token);
