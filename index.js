@@ -107,4 +107,4 @@ function getPhrases(name){
 bot.on('error', err =>{
   console.log(err);
 });
-bot.login(process.env.TOKEN);
+bot.login(token);
