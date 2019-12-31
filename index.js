@@ -1,32 +1,19 @@
 const Discord = require('discord.js');
-
-const token = 'NjU2OTkzMjE3NzUzMTIwNzg5.XgrmUg.RHWg06f_ZZJdZopw0nId9Gsk7mU';
-
-const PREFIX = '!';
-
-require('dotenv/config');
-
-// const http = ('http');
-
-const port = process.env.PORT || 3000;
-
-// http.createServer(function(request, response) {
-//   response.writeHead(200, {"Content-Type": "text/plain"});
-//   response.write("Hello World");
-//   response.end();
-//
-//   console.log("I am working");
-// }).listen(port);
-
-//const token = process.env.token;
-
 const bot = new Discord.Client();
+
+const {token} = require('./config.json');
+require('dotenv-flow').config();
+
+const config = {
+    token: process.env.TOKEN,
+    owner: process.env.OWNER,
+    prefix: process.env.PREFIX
+}
 
 bot.on('ready', () => {
   console.log('this bot is online');
 });
 bot.on('message', msg =>{
-
 
   let args = msg.content.substring(PREFIX.length).split(" ");
 
@@ -113,4 +100,4 @@ bot.on('error', err =>{
   console.log(err);
 });
 
-bot.login(token);
+bot.login(config.token);
