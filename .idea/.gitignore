@@ -1,4 +1,4 @@
 # Default ignored files
-/workspace.xml
-/.env
-/.config.json
+workspace.xml
+.env
+.config.json
