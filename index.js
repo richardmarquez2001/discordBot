@@ -4,22 +4,22 @@ const token = 'NjU2OTkzMjE3NzUzMTIwNzg5.XgrmUg.RHWg06f_ZZJdZopw0nId9Gsk7mU';
 
 const PREFIX = '!';
 
-//require('dotenv').config();
+require('dotenv').config();
 
 const http = ('http');
 
-//const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 
-// http.createServer(function(request, response) {
-//   response.writeHead(200, {"Content-Type": "text/plain"});
-//   response.write("Hello World");
-//   response.end();
-//
-//   console.log("I am working");
-// }).listen(port);
+http.createServer(function(request, response) {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.write("Hello World");
+  response.end();
 
-//const token = process.env.TOKEN;
+  console.log("I am working");
+}).listen(port);
+
+const token = process.env.token;
 
 const bot = new Discord.Client();
 
